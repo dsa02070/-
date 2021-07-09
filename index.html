@@ -37,8 +37,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
 
     <!-- style -->
+    <link rel="stylesheet" href="./assets/css/swiper.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 
 <body>
@@ -115,25 +117,234 @@
 
     <!-- main start -->
     <main>
-        <section>
+        <section id="main_banner">
             <h2 class="ir_pm">메인 배너 슬라이드</h2>
-            <div class="swiper-container mySwiper">
+            <div class="swiper-container main_banner01">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">Slide 1</div>
-                    <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
-                    <div class="swiper-slide">Slide 4</div>
-                    <div class="swiper-slide">Slide 5</div>
-                    <div class="swiper-slide">Slide 6</div>
-                    <div class="swiper-slide">Slide 7</div>
-                    <div class="swiper-slide">Slide 8</div>
-                    <div class="swiper-slide">Slide 9</div>
+                    <div class="swiper-slide">
+                        <a href="#"><img src="./assets/img/main_banner01.jpg"
+                                alt="EVENT 동물복지 목장 우유 출시 2주 구매 시 1주 추가 증정! 7.1 ~ 7.16"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#"><img src="./assets/img/main_banner02.jpg"
+                                alt="EVENT 위러브와 함께 좋을거 양배추! 2주 15,000원 특가 혜택 7.1 ~ 7.31"></a>
+                    </div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
             </div>
+            <!-- main_banner02 -->
+            <div class="swiper-container main_banner02">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="icon icon01"></div>
+                            <span>음용내역</span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="icon icon02"></div>
+                            <span>음용제품변경</span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="icon icon03"></div>
+                            <span>찜한제품</span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="icon icon04"></div>
+                            <span>고객번호등록/찾기</span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="icon icon05"></div>
+                            <span>스마트청구서</span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="icon icon06"></div>
+                            <span>배달건너뛰기</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <!-- login -->
+            <div class="login">
+                <span>지금 로그인하여 <em>맞춤 제품을<br> 추천</em> 받아보세요!</span>
+                <a href="#" class="btn_normal">로그인하기</a>
+            </div>
         </section>
+        <!-- about -->
+        <section class="about">
+            <h2>오늘은 이런 제품 어떠세요?</h2>
+            <div class="swiper-container section_slide01">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="./assets/img/about01.jpg" alt="마시는 새싹">
+                            <div class="text">
+                                <p class="name">돌미나리와민들레</p>
+                                <span class="price">2,100원</span><span class="volume">(130ml)</span>
+                            </div>
+                        </a>
+                        <div class="heart"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="./assets/img/about02.jpg" alt="마시는 새싹">
+                            <div class="text">
+                                <p class="name">프레쉬 헛개</p>
+                                <span class="price">2,400원</span><span class="volume">(130ml)</span>
+                            </div>
+                        </a>
+                        <div class="heart"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="./assets/img/about03.jpg" alt="마시는 새싹">
+                            <div class="text">
+                                <p class="name">리우먼바이탈</p>
+                                <span class="price">2,900원</span><span class="volume">(130ml)</span>
+                            </div>
+                        </a>
+                        <div class="new">NEW</div>
+                        <div class="heart"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="./assets/img/about04.jpg" alt="마시는 새싹">
+                            <div class="text">
+                                <p class="name">매일아침 활력칸</p>
+                                <span class="price">2,100원</span><span class="volume">(130ml)</span>
+                            </div>
+                        </a>
+                        <div class="heart"></div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="arrow_btn_wrap">
+                <a href="#" class="arrow_btn">상세하게 추천받기</a>
+            </div>
+        </section>
+        <!-- best_product -->
+        <section class="best_product">
+            <h2>베스트 제품</h2>
+            <div class="select_age">
+                <ul>
+                    <li class="active"><a href="#" class="">10대</a></li>
+                    <li><a href="#">20대</a></li>
+                    <li><a href="#">30대</a></li>
+                    <li><a href="#">40대</a></li>
+                    <li><a href="#">50대</a></li>
+                </ul>
+            </div>
+            <div class="top">
+                <a href="#">
+                    <p class="num">01</p>
+                    <div class="text">
+                        <p class="name">위러브플러스</p>
+                        <span class="price">2,600원 </span><span class="volume">(130ml)</span>
+                    </div>
+                    <div class="img">
+                        <img src="./assets/img/best01.jpg" alt="위러브 플러스">
+                    </div>
+                    <div class="heart"></div>
+                </a>
+            </div>
+            <div class="bottom">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <p class="num">02</p>
+                            <img src="./assets/img/best02.jpg" alt="노니&깔라만시">
+                            <div class="text">
+                                <p class="name">러브미 케일&샐러리</p>
+                                <span class="price">2,100원</span><span class="volume">(130ml)</span>
+                            </div>
+                            <div class="heart"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p class="num">03</p>
+                            <img src="./assets/img/best03.jpg" alt="노니&깔라만시">
+                            <div class="text">
+                                <p class="name">돌미나리와민들레</p>
+                                <span class="price">2,400원</span><span class="volume">(130ml)</span>
+                            </div>
+                            <div class="heart"></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- renewal -->
+        <div class="renewal">
+            <a href="#"><img src="./assets/img/middle_banner01.jpg"
+                    alt="Renewal 풀무원녹즙 온라인주문 혜택 홈페이지에서 주문했을 때만 누릴수 있는 혜택"></a>
+        </div>
+        <!-- question -->
+        <section class="question">
+            <h2>고객님 무엇이 궁금하세요?</h2>
+            <ul>
+                <li><a href="#">
+                        <span class="icon01"></span>
+                        <div class="text">
+                            <p class="title">제품</p>
+                            <span>어떤 제품이 저에게 맞을까요?</span>
+                        </div>
+                    </a>
+                </li>
+                <li><a href="#">
+                        <span class="icon02"></span>
+                        <div class="text">
+                            <p class="title">음용고객</p>
+                            <span>홈페이지에서 다른 제품으로<br>변경할 수 있나요?</span>
+                        </div>
+                    </a>
+                </li>
+                <li><a href="#">
+                        <span class="icon02"></span>
+                        <div class="text">
+                            <p class="title">음용고객</p>
+                            <span>출장이나 휴가 때문에 잠깐 못 먹을거<br>같은데 어떻게 해야하나요?</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="arrow_btn_wrap">
+                <a href="#" class="arrow_btn">바로가기</a>
+            </div>
+        </section>
+        <!-- drink -->
+        <div class="drink">
+            <a href="#"><img src="./assets/img/middle_banner02.jpg" alt="마셔보면 안다 10가지 패키지 중, 내 마음에 드는걸로PICK!"></a>
+        </div>
+        <!-- notice -->
+        <div class="notice">
+            <div class="top">
+                <a href="#"><span><strong>공지사항</strong>풀무원녹즙 홈페이지 점검 안내</span></a>
+                <a href="#"><span class="icon"></span></a>
+            </div>
+            <div class="bottom">
+                <div class="left">
+                    <p class="title">고객 기쁨 센터</p>
+                    <a class="phone_number" href="tel:080-800-0393">080-800-0393</a>
+                    <p class="sub">평일 09:00 ~ 18:00</p>
+                </div>
+                <div class="right">
+                    <p class="title">배달 가능지역 검색<a class="icon"></a></p>
+                    <p class="sub">원하시는 풀무원 녹즙<br>지점을 바로 찾아보세요!</p>
+                </div>
+            </div>
+        </div>
     </main>
     <!-- main end -->
 
@@ -142,7 +353,7 @@
         <div class="fmenu">
             <div>
                 <ul>
-                    <li><a href="#">홈</a></li>
+                    <li class="first"><a href="#"><span class="icon"></span>홈</a></li>
                     <li><a href="#">브랜드소개</a></li>
                     <li><a href="#"><strong>개인정보 처리방침</strong></a></li>
                     <li><a href="#">사업소개</a></li>
@@ -155,6 +366,7 @@
                     <li><a href="#">PC버전</a></li>
                 </ul>
             </div>
+            <!-- info -->
             <div class="info">
                 <ul>
                     <li>(주)풀무원녹즙</li>
@@ -180,20 +392,24 @@
             </div>
             <div>
                 <ul>
-                    <li> <strong>고객기쁨센터 : </strong> <a href="tel:080-800-0393"><em>080-800-0393</em></a> (평일 09:00~18:00
+                    <li><strong>고객기쁨센터 : </strong> <a href="tel:080-800-0393"><em>080-800-0393</em></a> (평일 09:00~18:00
                         토,일, 공휴일 휴무)</li>
                 </ul>
             </div>
+            <!-- copyright -->
             <div class="copyright">
                 COPYRIGHTⓒpulmuonegreenjuice co.,Ltd. ALL RIGHTS PESERVED
             </div>
+            <!-- select -->
             <div class="select">
                 <select>
+                    <option selected disabled hidden>풀무원가족사이트</option>
                     <option>풀무원건강생활</option>
                     <option>풀무원로하스</option>
                     <option>풀무원베이비밀</option>
                 </select>
             </div>
+            <!-- footer_logo -->
             <div class="footer_logo">
                 <a href="./index.html"><img src="./assets/img/f_logo.png" alt="풀무원 녹즙 하단 로고"></a>
             </div>
