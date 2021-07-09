@@ -55,6 +55,7 @@ header {
     //logo
     #logo {
         width: 50px;
+        margin-left: 30px;
 
         h1 {
             margin-top: 7px;
@@ -79,6 +80,7 @@ header {
                     width: 23px;
                     height: 23px;
                     background-image: url('../img/sprite_img.png');
+                    margin-top: 10px;
 
                     &.search {
                         background-position: -39px -7px;
@@ -137,9 +139,17 @@ footer {
                 position: relative;
                 float: left;
                 padding-right: 22px;
-                font-size: $fontSizeSmallest;
+                font-size: 10px;
                 color: $fontColorSub;
                 line-height: 1.4;
+
+                &.first {
+                    padding-left: 16px;
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                }
 
                 &:last-child:after {
                     display: none;
@@ -164,6 +174,17 @@ footer {
                     font-weight: bold;
                     text-decoration: underline;
                 }
+
+                .icon {
+                    position: absolute;
+                    top: 1px;
+                    left: 0px;
+                    display: inline-block;
+                    width: 12px;
+                    height: 11px;
+                    background-image: url('../img/sprite_img.png');
+                    background-position: -423px -285px;
+                }
             }
         }
     }
@@ -179,6 +200,20 @@ footer {
 
     .select {
         margin: 10px 0;
+
+        select {
+            width: 165px;
+            height: 32px;
+            font-size: $fontSizeSmallest;
+            padding-left: 10px;
+            border-radius: 16px;
+            border: 1px solid #c6c6c6;
+            color: $fontColorSub;
+            background-image: url('../img/down.png');
+            background-repeat: no-repeat;
+            background-position: 90% 50%;
+            background-size: 10px;
+        }
     }
 
     .footer_logo {
@@ -188,5 +223,47 @@ footer {
         img {
             width: 100%;
         }
+    }
+}
+
+.btn_normal {
+    width: 100px;
+    height: 35px;
+    font-size: $fontSizeSmallest;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    background: $greenColor;
+}
+
+.new {
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    background: $orangeColor;
+    color: #fff;
+    border-radius: 100%;
+}
+
+.heart {
+    width: 17px;
+    height: 15px;
+    background-image: url('../img/sprite_img.png');
+    background-position: -5px -83px;
+}
+
+.arrow_btn {
+    position: relative;
+    font-size: $fontSizeSmall;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 1px;
+        right: 0px;
+        width: 19px;
+        height: 19px;
+        background-image: url('../img/sprite_img.png');
+        background-position: -194px -82px;
     }
 }
