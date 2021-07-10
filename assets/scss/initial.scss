@@ -76,9 +76,14 @@ select {
     outline: none;
 }
 
-select {
+select,
+button {
     appearance: none;
     border: none;
+}
+
+button {
+    background: none;
 }
 
 select::-ms-expand {
