@@ -1,10 +1,12 @@
 /* common scss */
 /* var scss */
 /* 
+
 z-index
 
 .mobile_menu : 100;
 .search_menu : 120;
+.top_btn : 200;
 
 */
 /* skip nav */
@@ -27,6 +29,42 @@ z-index
 
 #skip a:active, #skip a:focus {
   top: 0;
+}
+
+.top_btn {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border: 1px solid #ccc;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.top_btn.on {
+  visibility: visible;
+  opacity: 1;
+}
+
+.top_btn .icon {
+  margin: 8px auto 0;
+  width: 12px;
+  height: 15px;
+  background-image: url("../img/sprite_img.png");
+  background-position: -287px -83px;
+}
+
+.top_btn p {
+  font-size: 1.4rem;
+  text-align: center;
+  -webkit-transform: translateY(20%);
+          transform: translateY(20%);
 }
 
 .mobile_menu {

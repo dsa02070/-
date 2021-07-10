@@ -3,10 +3,12 @@
 @import "./var.scss";
 
 /* 
+
 z-index
 
 .mobile_menu : 100;
 .search_menu : 120;
+.top_btn : 200;
 
 */
 
@@ -30,6 +32,41 @@ z-index
         &:focus {
             top: 0;
         }
+    }
+}
+
+// top btn
+.top_btn {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 200;
+
+    &.on {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .icon {
+        margin: 8px auto 0;
+        width: 12px;
+        height: 15px;
+        background-image: url('../img/sprite_img.png');
+        background-position: -287px -83px;
+    }
+
+    p {
+        font-size: $fontSizeSmall;
+        text-align: center;
+        transform: translateY(20%);
     }
 }
 
