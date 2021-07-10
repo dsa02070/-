@@ -2,6 +2,14 @@
 
 @import "./var.scss";
 
+/* 
+z-index
+
+.mobile_menu : 100;
+.search_menu : 120;
+
+*/
+
 /* skip nav */
 #skip {
     position: relative;
@@ -24,6 +32,372 @@
         }
     }
 }
+
+// mobile_menu
+.mobile_menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow: auto;
+    width: 100%;
+    left: -100%;
+    box-sizing: border-box;
+    background: #fff;
+    transition: 0.3s;
+    opacity: 0;
+    z-index: 100;
+
+    &.on {
+        left: 0;
+        opacity: 1;
+    }
+
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 19px;
+        height: 19px;
+        background-image: url('../img/sprite_img.png');
+        background-position: -346px -8px;
+        cursor: pointer;
+    }
+
+    .title {
+        font-size: $titleSizeSmall;
+        padding-top: 60px;
+        padding-left: 30px;
+
+        em {
+            font-weight: 500;
+            border-bottom: 2px solid $greenColor;
+            color: $greenColor;
+        }
+    }
+
+    // menu
+    .menu {
+        padding: 30px 0;
+        border-bottom: 1px solid #ddd;
+
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+            text-align: center;
+
+            li {
+                flex: 85.3px;
+
+                span {
+                    font-size: $fontSizeSmallest;
+                }
+
+                a {
+                    .icon {
+                        display: block;
+                        width: 33px;
+                        height: 30px;
+                        margin: 0 auto 10px;
+                        background-image: url('../img/sprite_img.png');
+                    }
+
+                    // icon 별 스타일
+                    .icon01 {
+                        background-position: -123px -545px;
+                    }
+
+                    .icon02 {
+                        background-position: -240px -546px;
+                    }
+
+                    .icon03 {
+                        background-position: -84px -545px;
+                    }
+
+                    .icon04 {
+                        width: 27px;
+                        background-position: -165px -545px;
+                    }
+                }
+            }
+        }
+    }
+
+    // line
+    .line {
+        width: 100%;
+        height: 9px;
+        background: #f4f4f4;
+    }
+
+    // info
+    .info {
+        padding: 30px 0;
+        margin: 0 30px;
+        border-bottom: 1px solid #ebebeb;
+
+        .title {
+            font-size: $fontSizeMid;
+            font-weight: bold;
+            padding: 0;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            overflow: hidden;
+
+            li {
+                float: left;
+                width: 50%;
+                height: 46px;
+                line-height: 46px;
+                background-image: url('../img/right_arrow.png');
+                background-repeat: no-repeat;
+                background-position: 90% 50%;
+                background-size: 12px 12px;
+
+                a {
+                    display: block;
+                    font-size: $fontSizeSmall;
+                }
+            }
+        }
+    }
+
+    // help
+    .help {
+        margin: 0 30px;
+        padding: 30px 0;
+
+        .title {
+            font-size: $fontSizeMid;
+            font-weight: bold;
+            padding: 0;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            li {
+                height: 40px;
+                line-height: 40px;
+                border-bottom: 1px dashed #dfdfdf;
+
+                a {
+                    position: relative;
+                    font-size: $fontSizeSmall;
+                    padding-left: 40px;
+                    color: $fontColorSub;
+
+                    span {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        background-image: url('../img/sprite_img.png');
+
+                        &.icon01 {
+                            background-position: -5px -165px;
+                        }
+
+                        &.icon02 {
+                            background-position: -30px -165px;
+                        }
+
+                        &.icon03 {
+                            background-position: -56px -165px;
+                        }
+
+                        &.icon04 {
+                            background-position: -79px -165px;
+                        }
+
+                        &.icon05 {
+                            background-position: -105px -165px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    //mobile_user_menu
+    .mobile_user_menu {
+        padding: 0 30px 150px;
+        overflow: hidden;
+
+        ul {
+            float: left;
+            margin-top: 6px;
+
+            li {
+                position: relative;
+                float: left;
+                margin-right: 15px;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 3px;
+                    right: -8px;
+                    width: 1px;
+                    height: 12px;
+                    background: #ccc;
+                }
+
+                &:last-child:after {
+                    display: none;
+                }
+
+                a {
+                    font-size: $fontSizeSmallest;
+                    color: $fontColorSub;
+                }
+            }
+        }
+
+        .login {
+            float: right;
+            width: 67px;
+            height: 27px;
+            line-height: 27px;
+            font-size: $fontSizeSmallest;
+            text-align: center;
+            color: $fontColorSub;
+            border: 1px solid #ccc;
+        }
+    }
+}
+
+// search menu
+.search_menu {
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    left: -100%;
+    padding: 0 15px;
+    background: #fff;
+    box-sizing: border-box;
+    transition: 0.3s;
+    opacity: 0;
+    z-index: 120;
+
+    &.on {
+        left: 0;
+        opacity: 1;
+    }
+
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 19px;
+        height: 19px;
+        background-image: url('../img/sprite_img.png');
+        background-position: -346px -8px;
+        cursor: pointer;
+    }
+
+    .title {
+        font-size: $titleSizeSmall;
+        padding-top: 65px;
+        margin-bottom: 24px;
+    }
+
+    .search {
+        position: relative;
+
+        input {
+            width: 100%;
+            border: none;
+            padding: 10px 0;
+            border-bottom: 1px solid #000;
+        }
+
+        button {
+            position: absolute;
+            right: 0;
+            top: 2px;
+            width: 24px;
+            height: 23px;
+            background-image: url('../img/sprite_img.png');
+            background-position: -38px -7px;
+            cursor: pointer;
+        }
+    }
+
+    .recomend {
+        margin-top: 32px;
+
+        .title {
+            font-size: $fontSizeSmall;
+            padding: 0;
+            margin: 0 0 15px 0;
+        }
+
+        ul {
+            overflow: hidden;
+
+            li {
+                float: left;
+                margin-right: 3px;
+
+                a {
+                    display: inline-block;
+                    font-size: $fontSizeSmallest;
+                    color: $fontColorLight;
+                    padding: 9px 8px;
+                    border: 1px solid #ccc;
+                }
+            }
+        }
+    }
+
+    .banner {
+        position: absolute;
+        width: calc(100% - 30px);
+        bottom: 15px;
+        text-align: center;
+
+        .bg {
+            padding: 30px 0;
+            background-image: url('../img/search_bg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            .title {
+                font-size: $fontSizeNormal;
+                font-weight: 500;
+                text-align: center;
+                padding: 0px 0 0 0;
+                margin-bottom: 10px;
+            }
+
+            a {
+                position: relative;
+                font-size: $fontSizeSmallest;
+                padding-right: 18px;
+
+                .icon {
+                    position: absolute;
+                    top: 1px;
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    background-image: url('../img/right_arrow.png');
+                    background-size: contain;
+                }
+            }
+        }
+    }
+}
+
+
 
 // container
 .container {
@@ -99,9 +473,17 @@ header {
 
     // hbottom
     .hbottom {
+        width: 100%;
         height: 43px;
         line-height: 43px;
+        background: #fff;
         border-bottom: 1px solid #ccc;
+
+        &.fixed {
+            position: fixed;
+            top: 0;
+            z-index: 100;
+        }
 
         #nav {
             ul {
@@ -226,6 +608,8 @@ footer {
     }
 }
 
+// common component style
+// 보통 버튼 스타일
 .btn_normal {
     width: 100px;
     height: 35px;
@@ -236,6 +620,7 @@ footer {
     background: $greenColor;
 }
 
+// new 마크 스타일
 .new {
     width: 26px;
     height: 26px;
@@ -245,6 +630,7 @@ footer {
     border-radius: 100%;
 }
 
+// 하트 모양 아이콘
 .heart {
     width: 17px;
     height: 15px;
@@ -252,6 +638,7 @@ footer {
     background-position: -5px -83px;
 }
 
+// 화살표 아이콘이 포함된 버튼
 .arrow_btn {
     position: relative;
     font-size: $fontSizeSmall;
