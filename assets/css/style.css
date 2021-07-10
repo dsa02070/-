@@ -78,11 +78,16 @@ select {
   outline: none;
 }
 
-select {
+select,
+button {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   border: none;
+}
+
+button {
+  background: none;
 }
 
 select::-ms-expand {
@@ -102,6 +107,13 @@ select::-ms-expand {
 
 /* common scss */
 /* var scss */
+/* 
+z-index
+
+.mobile_menu : 100;
+.search_menu : 120;
+
+*/
 /* skip nav */
 #skip {
   position: relative;
@@ -122,6 +134,317 @@ select::-ms-expand {
 
 #skip a:active, #skip a:focus {
   top: 0;
+}
+
+.mobile_menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+  width: 100%;
+  left: -100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
+  z-index: 100;
+}
+
+.mobile_menu.on {
+  left: 0;
+  opacity: 1;
+}
+
+.mobile_menu .close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 19px;
+  height: 19px;
+  background-image: url("../img/sprite_img.png");
+  background-position: -346px -8px;
+  cursor: pointer;
+}
+
+.mobile_menu .title {
+  font-size: 2rem;
+  padding-top: 60px;
+  padding-left: 30px;
+}
+
+.mobile_menu .title em {
+  font-weight: 500;
+  border-bottom: 2px solid #47ad1a;
+  color: #47ad1a;
+}
+
+.mobile_menu .menu {
+  padding: 30px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.mobile_menu .menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-align: center;
+}
+
+.mobile_menu .menu ul li {
+  -webkit-box-flex: 85.3px;
+      -ms-flex: 85.3px;
+          flex: 85.3px;
+}
+
+.mobile_menu .menu ul li span {
+  font-size: 1.1rem;
+}
+
+.mobile_menu .menu ul li a .icon {
+  display: block;
+  width: 33px;
+  height: 30px;
+  margin: 0 auto 10px;
+  background-image: url("../img/sprite_img.png");
+}
+
+.mobile_menu .menu ul li a .icon01 {
+  background-position: -123px -545px;
+}
+
+.mobile_menu .menu ul li a .icon02 {
+  background-position: -240px -546px;
+}
+
+.mobile_menu .menu ul li a .icon03 {
+  background-position: -84px -545px;
+}
+
+.mobile_menu .menu ul li a .icon04 {
+  width: 27px;
+  background-position: -165px -545px;
+}
+
+.mobile_menu .line {
+  width: 100%;
+  height: 9px;
+  background: #f4f4f4;
+}
+
+.mobile_menu .info {
+  padding: 30px 0;
+  margin: 0 30px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.mobile_menu .info .title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.mobile_menu .info ul {
+  overflow: hidden;
+}
+
+.mobile_menu .info ul li {
+  float: left;
+  width: 50%;
+  height: 46px;
+  line-height: 46px;
+  background-image: url("../img/right_arrow.png");
+  background-repeat: no-repeat;
+  background-position: 90% 50%;
+  background-size: 12px 12px;
+}
+
+.mobile_menu .info ul li a {
+  display: block;
+  font-size: 1.4rem;
+}
+
+.mobile_menu .help {
+  margin: 0 30px;
+  padding: 30px 0;
+}
+
+.mobile_menu .help .title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.mobile_menu .help ul li {
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px dashed #dfdfdf;
+}
+
+.mobile_menu .help ul li a {
+  position: relative;
+  font-size: 1.4rem;
+  padding-left: 40px;
+  color: #666;
+}
+
+.mobile_menu .help ul li a span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/sprite_img.png");
+}
+
+.mobile_menu .help ul li a span.icon01 {
+  background-position: -5px -165px;
+}
+
+.mobile_menu .help ul li a span.icon02 {
+  background-position: -30px -165px;
+}
+
+.mobile_menu .help ul li a span.icon03 {
+  background-position: -56px -165px;
+}
+
+.mobile_menu .help ul li a span.icon04 {
+  background-position: -79px -165px;
+}
+
+.mobile_menu .help ul li a span.icon05 {
+  background-position: -105px -165px;
+}
+
+.mobile_menu .mobile_user_menu {
+  padding: 0 30px 150px;
+  overflow: hidden;
+}
+
+.mobile_menu .mobile_user_menu ul {
+  float: left;
+  margin-top: 6px;
+}
+
+.mobile_menu .mobile_user_menu ul li {
+  position: relative;
+  float: left;
+  margin-right: 15px;
+}
+
+.mobile_menu .mobile_user_menu ul li:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  right: -8px;
+  width: 1px;
+  height: 12px;
+  background: #ccc;
+}
+
+.mobile_menu .mobile_user_menu ul li:last-child:after {
+  display: none;
+}
+
+.mobile_menu .mobile_user_menu ul li a {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.mobile_menu .mobile_user_menu .login {
+  float: right;
+  width: 67px;
+  height: 27px;
+  line-height: 27px;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #666;
+  border: 1px solid #ccc;
+}
+
+.search_menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 15px;
+  background: #fff;
+  z-index: 120;
+}
+
+.search_menu .close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 19px;
+  height: 19px;
+  background-image: url("../img/sprite_img.png");
+  background-position: -346px -8px;
+  cursor: pointer;
+}
+
+.search_menu .title {
+  font-size: 2rem;
+  padding-top: 65px;
+  margin-bottom: 24px;
+}
+
+.search_menu .search {
+  position: relative;
+}
+
+.search_menu .search input {
+  width: 100%;
+  border: none;
+  padding: 10px 0;
+  border-bottom: 1px solid #000;
+}
+
+.search_menu .search button {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  width: 24px;
+  height: 23px;
+  background-image: url("../img/sprite_img.png");
+  background-position: -38px -7px;
+  cursor: pointer;
+}
+
+.search_menu .recomend {
+  margin-top: 32px;
+}
+
+.search_menu .recomend .title {
+  font-size: 1.4rem;
+  padding: 0 15px 0 0;
+  margin: 0 15px 0 0;
+}
+
+.search_menu .recomend ul {
+  overflow: hidden;
+}
+
+.search_menu .recomend ul li {
+  float: left;
+  margin-right: 3px;
+}
+
+.search_menu .recomend ul li a {
+  display: inline-block;
+  font-size: 1.1rem;
+  color: #666;
+  padding: 9px 8px;
+  border: 1px solid #ccc;
 }
 
 .container {
@@ -305,6 +628,7 @@ footer .select select {
   font-size: 1.1rem;
   padding-left: 10px;
   border-radius: 16px;
+  border: 1px solid #c6c6c6;
   color: #666;
   background-image: url("../img/down.png");
   background-repeat: no-repeat;
